@@ -31,26 +31,6 @@ app.configure(function() {
 es.on('connection', io);
 
 /**
- * Validate token's presence
- */
-
-// function validateToken(req, res, next) {
-//   var err = new Error('no token supplied!')
-//   if(!req.query.token) return next(err);
-//   return next();
-// }
-
-/**
- * Validate URL's presence
- */
-
-// function validateUid(req, res, next) {
-//   var err = new Error('no url supplied!')
-//   if(!req.query.uid) return next(err);
-//   return next();
-// }
-
-/**
  * Listen if we are calling this file directly
  */
 if(!module.parent) {
