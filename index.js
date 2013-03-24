@@ -1,3 +1,7 @@
+/**
+ * Module Dependencies
+ */
+
 var express = require('express'),
     engine = require('engine.io'),
     io = require('./io'),
