@@ -17,7 +17,7 @@ app.use(express.static(__dirname))
  */
 
 app.get('*', function(req, res) {
-  res.sendfile('./index.html');
+  res.sendfile(__dirname + '/index.html');
 });
 
 /**
