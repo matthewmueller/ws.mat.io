@@ -1,6 +1,6 @@
 # ws.mat.io
 
-Example websocket server. Uses URLs for rooms.
+Example websocket server. Uses URLs for rooms. Also supports socket names.
 
 ## Test
 
