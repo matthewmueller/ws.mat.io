@@ -7,7 +7,8 @@ var express = require('express'),
     io = require('./io'),
     app = express(),
     es = new engine.Server(),
-    server = require('http').createServer(app);
+    server = require('http').createServer(app),
+    cors = require('./cors');
 
 /**
  * Handle the upgrade
@@ -24,6 +25,7 @@ server.on('upgrade', function(req, socket, head) {
 app.configure(function() {
   app.use(express.logger('dev'))
   app.use(express.query());
+  app.use(cors);
   app.use('/engine.io', es.handleRequest.bind(es));
   app.use(express.errorHandler());
 });
