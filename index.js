@@ -4,7 +4,7 @@
 
 var express = require('express'),
     engine = require('engine.io'),
-    io = require('./io'),
+    io = require('./lib/io'),
     app = express(),
     es = new engine.Server(),
     server = require('http').createServer(app),
@@ -39,6 +39,7 @@ es.on('connection', io);
 /**
  * Listen if we are calling this file directly
  */
+
 if(!module.parent) {
   var port = process.argv[2] || 9000;
   server.listen(port);
